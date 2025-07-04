@@ -5,6 +5,10 @@
   --content-text-color: #776;
 
   --blocks-background: rgb(244, 162, 97);
+  --menu-background: #379790;
+  --active-element-background: white;
+  --hover-element-background: white;
+  --nav-hover-text-color: #333;
 
   --header1-title-font-size: 45px;
   --header2-title-font-size: 35px;
@@ -23,8 +27,9 @@ body {
   margin: 0;
 }
 
-.title {
+.site-title {
   font-size: var(--site-title-font-size);
+  font-weight: 600;
 }
 
 h1 {
@@ -35,6 +40,11 @@ h2 {
   font-size: var(--header2-title-font-size);
 }
 
+a {
+  color: var(--main-text-color);
+  font-weight: 600;
+}
+
 /* Section styles */
 body {
   display: flex;
@@ -42,6 +52,12 @@ body {
 }
 
 header {
+  padding: 1rem;
+  background: var(--blocks-background);
+  text-align: center;
+}
+
+.container {
   background: var(--blocks-background);
   padding: 1rem;
   text-align: center;
@@ -50,6 +66,39 @@ header {
 main {
   flex: 1;
   margin: 2rem;
+}
+
+nav {
+  background: var(--menu-background);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: var(--main-text-color);
+  font-weight: bold;
+  padding: 8px 12px;
+  margin: 0;
+  transition: background 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  background: var(--hover-element-background);
+  color: var(--nav-hover-text-color);
+  border-radius: 4px;
+}
+
+.nav-menu li a.active {
+  background: var(--active-element-background);
+  color: var(--nav-hover-text-color);
+  border-radius: 4px;
 }
 
 main p {
@@ -70,3 +119,44 @@ footer {
   margin: 1rem auto;
   border-radius: 8px;
 }
+
+/* Appetizer Page */
+.recipe-list {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 850px) and (max-width: 1299px) {
+  .recipe-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem 1rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .recipe-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.recipe {
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.recipe img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Contact Page styles */
