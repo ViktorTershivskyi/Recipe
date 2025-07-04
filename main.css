@@ -1,0 +1,72 @@
+/* Variables */
+:root {
+  --site-title-font-size: 35px;
+  --main-text-color: white;
+  --content-text-color: #776;
+
+  --blocks-background: rgb(244, 162, 97);
+
+  --header1-title-font-size: 45px;
+  --header2-title-font-size: 35px;
+
+  --body-font-size: 18px;
+}
+
+/* General styles */
+html,
+body {
+  font-family: "Arial";
+  font-size: var(--body-font-size);
+  color: var(--main-text-color);
+
+  height: 100%;
+  margin: 0;
+}
+
+.title {
+  font-size: var(--site-title-font-size);
+}
+
+h1 {
+  font-size: var(--header1-title-font-size);
+}
+
+h2 {
+  font-size: var(--header2-title-font-size);
+}
+
+/* Section styles */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: var(--blocks-background);
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  margin: 2rem;
+}
+
+main p {
+  color: var(--content-text-color);
+}
+
+footer {
+  background: var(--blocks-background);
+  text-align: center;
+  padding-top: 14px;
+}
+
+.container img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
